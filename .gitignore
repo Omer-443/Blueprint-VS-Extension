@@ -1,0 +1,44 @@
+# Dependencies and generated output
+node_modules/
+dist/
+coverage/
+.vscode-test/
+
+# Local tooling and OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local caches
+.cache/
+tmp/
+temp/
+
+# Internal agent/editor metadata
+.agents/
+.codex/
+
+# Non-production scratch and investigation files
+audit.md
+cluster-fix-plan.md
+improvements.md
+debug-graph.js
+debug-watcher.js
+dump-graph.js
+esbuild.js
+test*.js
+test-fixtures/
+

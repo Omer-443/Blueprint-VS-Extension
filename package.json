@@ -1,0 +1,72 @@
+{
+  "name": "blueprint",
+  "displayName": "Blueprint Code Mapper",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Visualization",
+    "Education"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onCommand:blueprint.openPanel",
+    "onCommand:blueprint.openpanel",
+    "onCommand:blueprint.refreshGraph"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "blueprint.openPanel",
+        "title": "Blueprint: Open Architecture Map"
+      },
+      {
+        "command": "blueprint.openpanel",
+        "title": "Blueprint: Open Architecture Map"
+      },
+      {
+        "command": "blueprint.refreshGraph",
+        "title": "Blueprint: Force Refresh Architecture Map"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build:webview && tsc -p tsconfig.extension.json",
+    "compile": "npm run build:webview && tsc -p tsconfig.extension.json",
+    "watch": "tsc -p tsconfig.extension.json --watch",
+    "build:webview": "cd src/webview && node build-webview.mjs",
+    "watch:webview": "cd src/webview && vite dev",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@babel/parser": "7.24.7",
+    "@babel/traverse": "7.24.7",
+    "dagre": "^0.8.5",
+    "graphology": "0.25.4",
+    "graphology-traversal": "0.2.1",
+    "lodash": "4.17.21"
+  },
+  "devDependencies": {
+    "@types/babel__traverse": "7.20.6",
+    "@types/dagre": "^0.7.54",
+    "@types/lodash": "4.14.202",
+    "@types/node": "20.15.0",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@types/vscode": "^1.90.0",
+    "@vitejs/plugin-react": "4.3.0",
+    "@vscode/webview-ui-toolkit": "1.4.0",
+    "autoprefixer": "10.4.19",
+    "esbuild": "0.21.5",
+    "postcss": "8.4.38",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "reactflow": "11.11.3",
+    "tailwindcss": "3.4.4",
+    "typescript": "5.4.5",
+    "vite": "5.2.12",
+    "vitest": "1.6.0",
+    "zustand": "4.5.2"
+  }
+}
